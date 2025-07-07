@@ -1,24 +1,24 @@
-# 🌿 Leaf Disease Detection and Classification
+#  Leaf Disease Detection and Classification
 A deep learning-powered solution for early, accurate plant disease diagnostics 
-# 📌 Overview
+#  Overview
 Timely and accurate identification of leaf diseases plays a crucial role in maintaining crop health, increasing yields, and ensuring food security. This repository presents a comprehensive AI-driven framework for automated detection and classification of foliar diseases, developed as part of a competition entry for ResConnect.
 
 Our approach spans both traditional machine learning pipelines and state-of-the-art deep learning techniques, targeting high accuracy, computational efficiency, and real-world applicability in resource-constrained agricultural environments.
 
-# 🔬 Key Features
-✅ Classical ML models: Logistic Regression, SVM, KNN, Random Forest, LightGBM
+#  Key Features
+ Classical ML models: Logistic Regression, SVM, KNN, Random Forest, LightGBM
 
-🌿 Traditional vision pipeline with handcrafted features: up to 87% accuracy
+ Traditional vision pipeline with handcrafted features: up to 87% accuracy
 
-🔍 Hybrid deep feature + classical classifier models: up to 91% accuracy
+ Hybrid deep feature + classical classifier models: up to 91% accuracy
 
-🚀 End-to-end deep learning with CNNs and Transformers: up to 95% accuracy
+ End-to-end deep learning with CNNs and Transformers: up to 95% accuracy
 
-🧠 Architectures explored: DenseNet, ResNet, EfficientNet, ViT, Swin Transformer
+ Architectures explored: DenseNet, ResNet, EfficientNet, ViT, Swin Transformer
 
-📦 Scalable & deployable framework for real-world use
+ Scalable & deployable framework for real-world use
 
-# 🧠 Methodology
+#  Methodology
 The project is divided into three stages:
 
 1. Baseline Traditional Models
@@ -36,7 +36,7 @@ Train CNNs and vision transformers directly on raw images.
 
 Optimize architectures for high accuracy and efficiency.
 
-# 🌱 Applications
+#  Applications
 Early disease detection and precision agriculture
 
 Smart crop surveillance
