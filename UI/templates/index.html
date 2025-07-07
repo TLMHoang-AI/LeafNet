@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+            animation: slide 10s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%); }
+            100% { transform: translate(-30%, -30%); }
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .upload-section {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .upload-area {
+            border: 3px dashed #4caf50;
+            border-radius: 15px;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area:hover {
+            border-color: #2e7d32;
+            background: linear-gradient(45deg, #e8f5e8, #d4edda);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+        }
+
+        .upload-area.dragover {
+            border-color: #ff9800;
+            background: linear-gradient(45deg, #fff3e0, #ffe0b2);
+        }
+
+        .file-input {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+        }
+
+        .upload-icon {
+            font-size: 4em;
+            color: #4caf50;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .upload-text {
+            font-size: 1.3em;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: #6c757d;
+            font-size: 1em;
+        }
+
+        .file-name {
+            margin-top: 15px;
+            padding: 10px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 8px;
+            color: #2e7d32;
+            font-weight: 600;
+            display: none;
+        }
+
+        .predict-button {
+            background: linear-gradient(45deg, #ff9800, #f57c00);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .predict-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .predict-button:hover::before {
+            left: 100%;
+        }
+
+        .predict-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+        }
+
+        .predict-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4caf50;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .result {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .result-header {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .crop-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card h2 {
+            font-size: 1.5em;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+
+        .info-card h3 {
+            font-size: 1.3em;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            background: linear-gradient(45deg, #fff3e0, #ffe0b2);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .description p {
+            color: #5d4037;
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .result img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .result img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .upload-section {
+                padding: 30px 20px;
+            }
+            
+            .crop-info {
+                flex-direction: column;
+            }
+            
+            .info-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌿 Plant Disease Detection</h1>
+            <div class="subtitle">AI-Powered Plant Health Analysis</div>
+        </div>
+
+        <div class="upload-section">
+            <form method="POST" enctype="multipart/form-data" id="uploadForm">
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" name="image" class="file-input" id="imageInput" accept="image/*" required>
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Drop your plant image here</div>
+                    <div class="upload-subtext">or click to browse files</div>
+                    <div class="file-name" id="fileName"></div>
+                </div>
+                
+                <button type="submit" class="predict-button" id="predictButton" disabled>
+                    🔬 Analyze Plant Disease
+                </button>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>🔍 Analyzing your plant image...</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% if crop %}
+    <div class="result">
+        <div class="result-header">
+            <h2>🎯 Analysis Complete!</h2>
+        </div>
+        
+        <div class="crop-info">
+            <div class="info-card">
+                <h2>🌱 Crop Type</h2>
+                <div style="font-size: 1.3em; font-weight: bold; color: #2e7d32;">{{ crop }}</div>
+            </div>
+            
+            <div class="info-card">
+                <h3>🦠 Disease Status</h3>
+                <div style="font-size: 1.3em; font-weight: bold; color: #d32f2f;">{{ disease }}</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <p><strong>📋 Description:</strong> {{ description }}</p>
+        </div>
+        
+        <img src="{{ image_path }}" alt="Analyzed Plant Image">
+    </div>
+    {% endif %}
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const fileName = document.getElementById('fileName');
+        const predictButton = document.getElementById('predictButton');
+        const uploadForm = document.getElementById('uploadForm');
+        const loading = document.getElementById('loading');
+        const uploadArea = document.getElementById('uploadArea');
+
+        // File input change handler
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                fileName.textContent = `📄 Selected: ${file.name}`;
+                fileName.style.display = 'block';
+                predictButton.disabled = false;
+            } else {
+                fileName.style.display = 'none';
+                predictButton.disabled = true;
+            }
+        });
+
+        // Form submit handler
+        uploadForm.addEventListener('submit', function(e) {
+            loading.classList.add('active');
+            predictButton.disabled = true;
+            predictButton.textContent = '⏳ Processing...';
+        });
+
+        // Drag and drop functionality
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            uploadArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            uploadArea.classList.add('dragover');
+        }
+
+        function unhighlight(e) {
+            uploadArea.classList.remove('dragover');
+        }
+
+        uploadArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            
+            if (files.length > 0 && files[0].type.startsWith('image/')) {
+                imageInput.files = files;
+                const event = new Event('change', { bubbles: true });
+                imageInput.dispatchEvent(event);
+            }
+        }
+    </script>
+</body>
+</html>
