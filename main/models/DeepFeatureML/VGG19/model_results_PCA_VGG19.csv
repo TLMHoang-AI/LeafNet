@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1 Score,CV_scores(5fold)
+Logistic Regression,0.8736,0.8681,0.8736,0.8695,0.8401
+SVM,0.8717,0.8568,0.8717,0.8623,0.8391
+Random Forest,0.8164,0.8067,0.8164,0.8041,0.8034
+K-Nearest Neighbors,0.8498,0.8446,0.8498,0.8457,0.7892
+LightGBM,0.8422,0.8365,0.8422,0.8376,0.8381
