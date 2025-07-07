@@ -1,0 +1,584 @@
+[
+    {
+        "class_name": "Apple___Apple_scab",
+        "crop_name": "Apple",
+        "diseased_name": "Scab",
+        "description": "olive-green to dark brown spots on leaves, leading to yellowing"
+    },
+    {
+        "class_name": "Apple___Black_rot",
+        "crop_name": "Apple",
+        "diseased_name": "Black rot",
+        "description": "small black spots or concentric rings, leading to shriveling or drying."
+    },
+    {
+        "class_name": "Apple___Cedar_apple_rust",
+        "crop_name": "Apple",
+        "diseased_name": "Cedar-Apple Rust",
+        "description": "yellow to bright orange-red spots, black dots, and finger-like fungal tubes on the leaf surface."
+    },
+    {
+        "class_name": "Apple___healthy",
+        "crop_name": "Apple",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Cashew anthracnose",
+        "crop_name": "Cashew",
+        "diseased_name": "Anthracnose",
+        "description": "dark, sunken lesions and yellow to brown spots"
+    },
+    {
+        "class_name": "Cashew healthy",
+        "crop_name": "Cashew",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Cashew leaf miner",
+        "crop_name": "Cashew",
+        "diseased_name": "leaf miner",
+        "description": "tortuous markings on the upper surface, blistered patches of greyish white color, and distortion, browning, and curling of the leaves"
+    },
+    {
+        "class_name": "Cashew red rust",
+        "crop_name": "Cashew",
+        "diseased_name": "red rust",
+        "description": "circular rust-colored to burnt-orange or brown spots on the adaxial part of the leaves, slightly raised, filamentous, and fuzzy in texture."
+    },
+    {
+        "class_name": "Cassava bacterial blight",
+        "crop_name": "Cassava",
+        "diseased_name": "bacterial blight",
+        "description": "blight, wilting, dieback, and vascular necrosis"
+    },
+    {
+        "class_name": "Cassava brown spot",
+        "crop_name": "Cassava",
+        "diseased_name": "brown spot",
+        "description": "circular to angular brown spots, dark borders, yellow margins, and grey centers with black necrotic"
+    },
+    {
+        "class_name": "Cassava green mite",
+        "crop_name": "Cassava",
+        "diseased_name": "green mite",
+        "description": "yellowing, mottling, death and leaf fall"
+    },
+    {
+        "class_name": "Cassava healthy",
+        "crop_name": "Cassava",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Cassava mosaic",
+        "crop_name": "Cassava",
+        "diseased_name": "mosaic virus",
+        "description": " chlorotic mosaic of the leaves, leaf distortion, and stunted growth"
+    },
+    {
+        "class_name": "Cherry_(including_sour)___healthy",
+        "crop_name": "Cherry",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Cherry_(including_sour)___Powdery_mildew",
+        "crop_name": "Cherry",
+        "diseased_name": "Powdery mildew",
+        "description": "light roughly-circular, powdery looking patches"
+    },
+    {
+        "class_name": "Coffee  Phoma",
+        "crop_name": "Coffee",
+        "diseased_name": "Phoma",
+        "description": "dark-colored, zoned patches starting at the edges, with small black pycnidia on the lesions"
+    },
+    {
+        "class_name": "Coffee Cerscospora",
+        "crop_name": "Coffee",
+        "diseased_name": "Cerscospora",
+        "description": "brown eye-spots surrounded by yellow halos and cherries with brown, sunken, oval blotches with purplish halos"
+    },
+    {
+        "class_name": "Coffee Healthy",
+        "crop_name": "Coffee",
+        "diseased_name": "Healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Coffee Leaf rust",
+        "crop_name": "Coffee",
+        "diseased_name": "Rust",
+        "description": "irregular yellow to orange powdery lesions, with spots merging into larger brown lesions"
+    },
+    {
+        "class_name": "Coffee Miner",
+        "crop_name": "Coffee",
+        "diseased_name": "Miner",
+        "description": "transparent areas in the leaf and larvae maybe present on the underside of the leaf"
+    },
+    {
+        "class_name": "Corn Maize MLN",
+        "crop_name": "Maize",
+        "diseased_name": "Maize Lethal Necrosis",
+        "description": "long yellow stripes, yellowing and drying from the edges toward the midrib"
+    },
+    {
+        "class_name": "Corn Maize MSV",
+        "crop_name": "Maize",
+        "diseased_name": "Maize Streak Virus",
+        "description": "pale circular spots progressing to narrow, broken chlorotic stripes along secondary and tertiary veins, or white to yellow lesions"
+    },
+    {
+        "class_name": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+        "crop_name": "Maize",
+        "diseased_name": "Cercospora leaf spot Gray leaf spot",
+        "description": "small necrotic spots with halos expanding into rectangular gray to brown lesions, with distinct parallel edges limited by veins"
+    },
+    {
+        "class_name": "Corn_(maize)___Common_rust_",
+        "crop_name": "Maize",
+        "diseased_name": "Rust",
+        "description": "rust-colored to dark brown elongated pustules on both leaf surfaces, containing cinnamon brown urediniospores, with leaves potentially showing chlorosis and death under severe infection."
+    },
+    {
+        "class_name": "Corn_(maize)___healthy",
+        "crop_name": "Maize",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Corn_(maize)___Northern_Leaf_Blight",
+        "crop_name": "Maize",
+        "diseased_name": "Northern Leaf Blight",
+        "description": "canoe-shaped lesions with gray-green margins that turn tan with dark fungal sporulation"
+    },
+    {
+        "class_name": "Cucumber  Fresh Leaf",
+        "crop_name": "Cucumber",
+        "diseased_name": "Healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Cucumber Anthracnose",
+        "crop_name": "Cucumber",
+        "diseased_name": "Anthracnose",
+        "description": "yellow halos and watermelon spots being smaller and dark brown to black"
+    },
+    {
+        "class_name": "Cucumber Bacterial Wilt",
+        "crop_name": "Cucumber",
+        "diseased_name": "Bacterial Wilt",
+        "description": "dull green leaves, or yellow and brown at the margins"
+    },
+    {
+        "class_name": "Cucumber Downy Mildew",
+        "crop_name": "Cucumber",
+        "diseased_name": "Downy Mildew",
+        "description": "yellow to pale green spots and velvety grey fuzz"
+    },
+    {
+        "class_name": "Cucumber Gummy Stem Blight",
+        "crop_name": "Cucumber",
+        "diseased_name": "Gummy Stem Blight",
+        "description": "dark brown circular spots starting at the margins and rapidly spreading across the entire leaf, with lesions varying in color from light brown to nearly black"
+    },
+    {
+        "class_name": "Grape Brown Spot",
+        "crop_name": "Grape",
+        "diseased_name": "Brown Spot",
+        "description": "small brown spots on leaves that expand and turn darker, eventually causing leaf fall"
+    },
+    {
+        "class_name": "Grape Downy Mildew",
+        "crop_name": "Grape",
+        "diseased_name": "Downy Mildew",
+        "description": "small brown spots that fall out, creating a shot-hole effect"
+    },
+    {
+        "class_name": "Grape Mites Disease",
+        "crop_name": "Grape",
+        "diseased_name": "Mites",
+        "description": "small bumps resembling smallpox and white furry patches"
+    },
+    {
+        "class_name": "Grape___Black_rot",
+        "crop_name": "Grape",
+        "diseased_name": "Black rot",
+        "description": "showing reddish-brown spots that merge into irregular blotches with tannish brown centers and black margins"
+    },
+    {
+        "class_name": "Grape___Esca_(Black_Measles)",
+        "crop_name": "Grape",
+        "diseased_name": "Esca (Black Measles)",
+        "description": "irregular chlorotic areas that dry out completely"
+    },
+    {
+        "class_name": "Grape___healthy",
+        "crop_name": "Grape",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
+        "crop_name": "Grape",
+        "diseased_name": "Leaf blight (Isariopsis Leaf Spot)",
+        "description": "scattered, somewhat angular, purple-brown spots"
+    },
+    {
+        "class_name": "Mango___Anthracnose",
+        "crop_name": "Mango",
+        "diseased_name": "Anthracnose",
+        "description": "tan to dark brown spots, often with darker borders, forming towards the margins"
+    },
+    {
+        "class_name": "Mango___Bacterial_Canker",
+        "crop_name": "Mango",
+        "diseased_name": "Bacterial Canker",
+        "description": "water-soaked spots"
+    },
+    {
+        "class_name": "Mango___Cutting_Weevil",
+        "crop_name": "Mango",
+        "diseased_name": "Cutting Weevil",
+        "description": "disease cuts the mango leaf in such a way that it looks like it is cut with scissors"
+    },
+    {
+        "class_name": "Mango___Die_Back",
+        "crop_name": "Mango",
+        "diseased_name": "Die Back",
+        "description": "dry out and break off from the top down"
+    },
+    {
+        "class_name": "Mango___Gall_Midge",
+        "crop_name": "Mango",
+        "diseased_name": "Gall Midge",
+        "description": "small, raised swellings on leaves, resembling pimples, caused by insect larvae feeding on plant tissue"
+    },
+    {
+        "class_name": "Mango___Healthy",
+        "crop_name": "Mango",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Mango___Powdery_Mildew",
+        "crop_name": "Mango",
+        "diseased_name": "Powdery Mildew",
+        "description": "light roughly-circular, powdery looking patches"
+    },
+    {
+        "class_name": "Mango___Sooty_Mould",
+        "crop_name": "Mango",
+        "diseased_name": "Sooty Mould",
+        "description": "black fungal growth on leaf surfaces, often associated with honeydew from sap-sucking insects, leading to reduced photosynthesis"
+    },
+    {
+        "class_name": "Orange___Haunglongbing_(Citrus_greening)",
+        "crop_name": "Orange",
+        "diseased_name": "Haunglongbing (Citrus greening)",
+        "description": "discolored leaves, yellow coloration, and a blotchy-mottle"
+    },
+    {
+        "class_name": "Peach___Bacterial_spot",
+        "crop_name": "Peach",
+        "diseased_name": "Bacterial spot",
+        "description": "pale-green spots turning light brown with a yellowish halo. Spots may merge, darken, dry out, and create a shot-hole effect"
+    },
+    {
+        "class_name": "Peach___Healthy",
+        "crop_name": "Peach",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Pepper Bell_pepper leaf spot",
+        "crop_name": "Pepper",
+        "diseased_name": "Bell pepper leaf spot",
+        "description": "water-soaked lesions,dark purple-brown spots with light brown centers"
+    },
+    {
+        "class_name": "Pepper,_bell___healthy",
+        "crop_name": "Black Pepper",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Pepper black_pepper_leaf_blight",
+        "crop_name": "Black Pepper",
+        "diseased_name": " leaf blight",
+        "description": "White powdery growth on leaves and stems, stunted growth, yellowing"
+    },
+    {
+        "class_name": "Pepper black_pepper_yellow_mottle_virus",
+        "crop_name": "Black Pepper",
+        "diseased_name": "yellow mottle virus",
+        "description": "chlorotic, mottled, vein-cleared, and distorted leaves and stunted growth"
+    },
+    {
+        "class_name": "Pepper,_bell___Bacterial_spot",
+        "crop_name": "Pepper",
+        "diseased_name": "Bacterial spot",
+        "description": "water-soaked lesions,dark purple-brown spots with light brown centers"
+    },
+    {
+        "class_name": "Pepper black_pepper_healthy",
+        "crop_name": "Pepper",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Potato___Early_blight",
+        "crop_name": "Potato",
+        "diseased_name": "Early blight",
+        "description": "small, dark, papery flecks growing into brown-black, circular-to-oval areas with angular borders"
+    },
+    {
+        "class_name": "Potato___healthy",
+        "crop_name": "Potato",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Potato___Late_blight",
+        "crop_name": "Potato",
+        "diseased_name": "Late blight",
+        "description": "small, irregular green spots with pale green to yellow rings, growing across veins"
+    },
+    {
+        "class_name": "Raspberry___Healthy",
+        "crop_name": "Raspberry",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Rice  Hispa",
+        "crop_name": "Rice",
+        "diseased_name": "Hispa",
+        "description": "white streaks from scraping, translucent white patches"
+    },
+    {
+        "class_name": "Rice  Leaf Blast",
+        "crop_name": "Rice",
+        "diseased_name": "Blast",
+        "description": "white to gray-green lesions with dark green borders or elliptical or spindle-shaped with whitish to gray centers and red to brownish borders"
+    },
+    {
+        "class_name": "Rice BacterialBlight",
+        "crop_name": "Rice",
+        "diseased_name": "Bacterial Blight",
+        "description": "leaves turn grayish green and roll up or turn yellow to straw-colored and wilt"
+    },
+    {
+        "class_name": "Rice Brown Spot",
+        "crop_name": "Rice",
+        "diseased_name": "Brown Spot",
+        "description": "dark brown to purple-brown, later developing light brown to gray centers with reddish-brown margins"
+    },
+    {
+        "class_name": "Rice Healthy",
+        "crop_name": "Rice",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Rice Leaf Scald",
+        "crop_name": "Rice",
+        "diseased_name": "Scald",
+        "description": "zonate lesions of alternating light tan and dark brown from tips or edges, oblong lesions with light brown halos, and translucent leaf tips and margins"
+    },
+    {
+        "class_name": "Rice Leaf Smut",
+        "crop_name": "Rice",
+        "diseased_name": "Smut",
+        "description": "a lot of tiny black spots"
+    },
+    {
+        "class_name": "Rice Narrow Brown Spot",
+        "crop_name": "Rice",
+        "diseased_name": "Narrow Brown Spot",
+        "description": "light to dark brown, linear lesions parallel to the vein"
+    },
+    {
+        "class_name": "Soybean___Healthy",
+        "crop_name": "Soybean",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Squash___Powdery_mildew",
+        "crop_name": "Squash",
+        "diseased_name": "Powdery mildew",
+        "description": "light roughly-circular, powdery looking patches"
+    },
+    {
+        "class_name": "Strawberry___healthy",
+        "crop_name": "Strawberry",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Strawberry___Leaf_scorch",
+        "crop_name": "Strawberry",
+        "diseased_name": "scorch",
+        "description": "irregular dark purple spots that enlarge and resemble drops of tar,or brown, dry up, curl, and look scorched"
+    },
+    {
+        "class_name": "Sugarcane___Banded_Chlorosis",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Banded Chlorosis",
+        "description": "horizontal areas of light green to white tissue that extends in a narrow band across the leaf"
+    },
+    {
+        "class_name": "Sugarcane___Brown_Rust",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Brown Rust",
+        "description": "yellowish to dark brown pustule lesions"
+    },
+    {
+        "class_name": "Sugarcane___Brown_Spot",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Brown Spot",
+        "description": "red-brown oval shaped lesions with yellow halo"
+    },
+    {
+        "class_name": "Sugarcane___Dried_Leaves",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Dried Leaves",
+        "description": "dried, withered leaves"
+    },
+    {
+        "class_name": "Sugarcane___Grassy_shoot",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Grassy shoot",
+        "description": "characterized by excessive tillering, narrow leaves, and pale green discoloration of foliage"
+    },
+    {
+        "class_name": "Sugarcane___Healthy_Leaves",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Healthy Leaves",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Sugarcane___Pokkah_Boeng",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Pokkah Boeng",
+        "description": "chlorotic, rough, wrinkled, twisted, and shortened leaves"
+    },
+    {
+        "class_name": "Sugarcane___Sett_Rot",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Sett Rot",
+        "description": "withered leaves, and discolored red central portions with a rotting"
+    },
+    {
+        "class_name": "Sugarcane___Smut",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Smut",
+        "description": "shortened, crinkled, and stunted leaves with whips replacing spindle leaves"
+    },
+    {
+        "class_name": "Sugarcane___Viral_Disease",
+        "crop_name": "Sugarcane",
+        "diseased_name": "mosaic virus",
+        "description": "irregular yellow and green inlays, stripes, or mottles alternate with parallel veins"
+    },
+    {
+        "class_name": "Sugarcane___Yellow_Leaf",
+        "crop_name": "Sugarcane",
+        "diseased_name": "Yellow Leaf",
+        "description": "yellowing midribs, adjacent laminar yellowing, and leaf drying along the midrib"
+    },
+    {
+        "class_name": "Tea___Healthy",
+        "crop_name": "Tea",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Tea___Leaf_blight",
+        "crop_name": "Tea",
+        "diseased_name": "leaf blight",
+        "description": "yellow-brown and water-soaked disease spots, or irregular patches in light brown and gray"
+    },
+    {
+        "class_name": "Tea___Red_leaf_spot",
+        "crop_name": "Tea",
+        "diseased_name": "Red leaf spot",
+        "description": "circular, bright red spots"
+    },
+    {
+        "class_name": "Tea___Red_scab",
+        "crop_name": "Tea",
+        "diseased_name": "Red scab",
+        "description": "Appear as small red spots with a grayish white or grayish brown center"
+    },
+    {
+        "class_name": "Tomato verticulium wilt",
+        "crop_name": "Tomato",
+        "diseased_name": "Verticillium wilt",
+        "description": "yellowing lower leaves, v-shaped lesions, brown necrotic tissue, vascular streaking"
+    },
+    {
+        "class_name": "Tomato___Bacterial_spot",
+        "crop_name": "Tomato",
+        "diseased_name": "Bacterial spot",
+        "description": "small spots, water-soaked circular areas"
+    },
+    {
+        "class_name": "Tomato___Early_blight",
+        "crop_name": "Tomato",
+        "diseased_name": "Early blight",
+        "description": "small dark spots, round brown leaf spots with target-like concentric rings, yellowing tissue"
+    },
+    {
+        "class_name": "Tomato___healthy",
+        "crop_name": "Tomato",
+        "diseased_name": "healthy",
+        "description": "leaves appear normal and healthy"
+    },
+    {
+        "class_name": "Tomato___Late_blight",
+        "crop_name": "Tomato",
+        "diseased_name": "Late blight",
+        "description": "irregularly shaped, water-soaked lesions"
+    },
+    {
+        "class_name": "Tomato___Leaf_Mold",
+        "crop_name": "Tomato",
+        "diseased_name": "Leaf Mold",
+        "description": "pale greenish-yellow spots on upper sides, olive-green to brown mold on lower surfaces, and withered leaves"
+    },
+    {
+        "class_name": "Tomato___Septoria_leaf_spot",
+        "crop_name": "Tomato",
+        "diseased_name": "Septoria leaf spot",
+        "description": "Spots are circular with dark brown margins and tan to gray centers with small black fruiting structures"
+    },
+    {
+        "class_name": "Tomato___Spider_mites_Two-spotted_spider_mite",
+        "crop_name": "Tomato",
+        "diseased_name": "Two‑spotted spider mites",
+        "description": "blotched with pale yellow, reddish brown spots ranging from small to large areas"
+    },
+    {
+        "class_name": "Tomato___Target_Spot",
+        "crop_name": "Tomato",
+        "diseased_name": "Target Spot",
+        "description": "small necrotic lesions with light brown centers and dark margins, becoming circular with gray to pale brown centers and darker concentric circles"
+    },
+    {
+        "class_name": "Tomato___Tomato_mosaic_virus",
+        "crop_name": "Tomato",
+        "diseased_name": " mosaic virus",
+        "description": "yellow mosaic with general mottling and distortion of younger leaves, often causing stunted plant growth"
+    },
+    {
+        "class_name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+        "crop_name": "Tomato",
+        "diseased_name": "Yellow Leaf Curl Virus",
+        "description": "yellowing, curling, and browning of leaves"
+    }
+]
