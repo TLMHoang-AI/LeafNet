@@ -1,0 +1,8 @@
+model,family,test_accuracy,weighted_f1
+DenseNet201,CNN,0.9570,0.9555
+ResNet50V2,CNN,0.9239,0.9188
+Swin Transformer,Transformer,0.9229,0.9193
+ViT,Transformer,0.9209,0.9157
+ResNet50,CNN,0.9222,0.9242
+ResNet101,CNN,0.9177,0.9192
+EfficientNet-B0,CNN,0.9237,0.9257
