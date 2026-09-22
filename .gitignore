@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+.venv/
+venv/
+env/
+.env
+.env.*
+
+*.pth
+*.pt
+*.ckpt
+
+demo/static/uploads/
