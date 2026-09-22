@@ -3,7 +3,7 @@
 Plant leaf disease classification project developed for **Research Connect 2025**, where our team advanced to the **Top 12 Finalists**.
 
 **Role:** Team Leader / AI Engineer  
-**Team size:** 3
+**Team size:** 5
 
 LeafNet compares three levels of visual learning for plant disease recognition:
 
